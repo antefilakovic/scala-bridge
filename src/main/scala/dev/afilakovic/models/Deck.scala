@@ -12,7 +12,7 @@ class Deck() {
 }
 
 object Deck {
-  private def createDeck(): List[Card] = (for (suit <- Constants.suits; denomination <- Constants.denominationsAndValues.keys) yield Card(suit, denomination)).toList
+  private def createDeck(): List[Card] = (for (suit <- Constants.SUITS; denomination <- Constants.DENOMINATIONS_AND_VALUES.keys) yield Card(suit, denomination)).toList
 
   private def shuffle(cards: List[Card]) = util.Random.shuffle(cards)
 }
